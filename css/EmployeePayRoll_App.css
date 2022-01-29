@@ -48,7 +48,7 @@ body {
 }
 
 
-/* UC 2 – On Document Load Set Event Listeners*/
+/* UC 2 – On Document Load Set Event Listeners and UC 4 – Employee Payroll Form with Gender, Department and Salary Range*/
 
 .form-content {
     min-height: calc(100%-80px);
