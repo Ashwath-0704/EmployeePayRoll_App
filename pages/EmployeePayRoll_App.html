@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../css/EmployeePayRoll_App.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE PAYROLL APP</title>
+</head>
+
+<!--UC1 Create a center align box using div tag - Add a header element on top of box having text as "Employee Payroll Form"-->
+
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="../assert/FS HTML_CSS LP02 Employee Payroll App Assets (1)/assets/images/logo.png" alt="">
+            <div>
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+    <!-- UC 2 – On Document Load Set Event Listeners -->
+    <div class="form-content">
+        <form class="form" action="#" onreset="resetButton()" onsubmit="save(event)">
+            <div class="form-head">Employee Payroll Form</div>
+            <div class="row-content">
+                <label for="name" class="label text">Name</label>
+                <input type="text" name="name" id="name" class="input" placeholder="Your Name ..." required>
+                <error-output class="text-error"></error-output>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
