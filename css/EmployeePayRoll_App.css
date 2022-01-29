@@ -221,7 +221,7 @@ error-output {
 }
 
 
-/* UC 6 Extn – Adding Media Queries */
+/* UC 6 Exts – Adding Media Queries */
 
 @media only screen and (max-width:600px) {
     .form {
