@@ -48,7 +48,7 @@ body {
 }
 
 
-/* UC 2 – On Document Load Set Event Listeners */
+/* UC 2 – On Document Load Set Event Listeners*/
 
 .form-content {
     min-height: calc(100%-80px);
@@ -129,4 +129,25 @@ label {
     justify-content: space-between;
     margin-bottom: 10px;
     padding-bottom: 10px;
+}
+
+
+/* UC 3 – Specify Profile Pic to the Employee Payroll App */
+
+.profile-radio-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile-radio-content>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
 }
