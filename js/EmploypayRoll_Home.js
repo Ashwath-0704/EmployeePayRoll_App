@@ -1,7 +1,33 @@
 // UC 4 – Display Employee Details in Tabular Format using Template Literals
 
+const createEmployeePayRollJSON = () => {
+    let employeePayRollLocal = [
 
-// UC 5 – Display Employee Details from JSON Object.
+        {
+            _name: 'Ashwath ',
+            _profilePic: '../assert/FS HTML_CSS LP02 Employee Payroll App Assets (1)/assets/profile-images/Ellipse -3.png ',
+            _gender: 'male',
+            _department: ['Sales', 'Finance', 'Engineer'],
+            _salary: '479800',
+            _note: 'TEST - 1',
+            _id: new Date().getTime(),
+            // _date = "29 Oct 2019"
+        },
+        {
+            _name: "Anusha",
+            _profilePic: "../assert/FS HTML_CSS LP02 Employee Payroll App Assets (1)/assets/profile-images/Ellipse -4.png",
+            _gender: "female",
+            _department: ["HR", "Finance"],
+            _salary: "400000",
+            _note: "TEST-2",
+            _id: new Date().getTime(),
+            // _date = "10 feb 2019"
+        }
+    ];
+    return employeePayRollLocal;
+}
+
+// UC 5 – Display Employee Details from JSON Object
 
 window.addEventListener('DOMContentLoaded', (event) => {
     createInnerHtml();
@@ -9,9 +35,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 const createInnerHtml = () => {
     let employeePayRollList = createEmployeePayRollJSON();
-    const headerHtml = "<tr><th>Name</th><th>Gender</th><th>Department</th><th>Salary</th><th>Start Date</th><th>Actions</th></tr>";
-    for (const employeePayRollData of employeePayRollList) {
-        const innerHtml = `${headerHtml}
+    const headerHtml = `<tr><th>Name</th><th>Gender</th><th>Department</th><th>Salary</th><th>Start Date</th><th>Actions</th></tr>`;
+    let innerHtml = `${headerHtml}`;
+    if (employeePayRollList.length != 0) {
+        for (const employeePayRollData of employeePayRollList) {
+            innerHtml = `${innerHtml}
             <tr>
                 <td><img src="${employeePayRollData._profilePic}" alt="!!!" class="profile">${employeePayRollData._name}</td>
                 <td>${employeePayRollData._gender}</td>
@@ -24,8 +52,9 @@ const createInnerHtml = () => {
                 </td>
             </tr>
             `;
+        }
         document.querySelector('#table-display').innerHTML = innerHtml;
-    }
+    } else return;
 }
 
 const getDeptHtml = (deptList) => {
